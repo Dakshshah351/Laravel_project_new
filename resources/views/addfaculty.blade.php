@@ -1,31 +1,31 @@
-@extends('layouts.main')
+@extends('layouts.admin_layout')
 
 @push('title')
-    <title>Register</title>
+    <title>Add Faculty</title>
 @endpush
 
-@section('main-section')
-    Register<br>
-    <form action="/register" method="POST">
+@section('content')
+  <center><b><u>  <h1>Add Faculty</h1></b></u><br> </center>
+    <form action="/addfaculty" method="POST">
         @csrf
-        <input type="text" name="name" placeholder="name" value="{{old('name')}}"><br>
+      Name:  <input type="text" name="name" placeholder="name" value="{{old('name')}}"><br><br>
         @error('name')
             {{$message}}<br>
         @enderror
-        <input type="text" name="email" placeholder="email" value="{{old('email')}}"><br>
+      E-mail:  <input type="text" name="email" placeholder="email" value="{{old('email')}}"><br><br>
         @error('email')
             {{$message}}<br>
         @enderror
-        <input type="password" name="password" placeholder="password"><br>
+        Password:<input type="password" name="password" placeholder="password"><br><br>
         @error('password')
             {{$message}}<br>
         @enderror
-        <input type="password" name="confirm_password" placeholder="confirm_password"><br>
+        Confirm_password :<input type="password" name="confirm_password" placeholder="confirm_password"><br><br>
         @error('confirm_password')
             {{$message}}<br>
         @enderror
         <input type="submit" value="Submit">
-    </form>
+   </form>
 <br>
     <table border="2px">
         <tr>
@@ -38,9 +38,9 @@
             <tr>
                 <td>{{$value->name}}</td>
                 <td>{{$value->email}}</td>
-                <td><a href="/register/{{$value->id}}/edit">Edit</a></td>
+                <td><a href="/addfaculty/{{$value->id}}/edit">Edit</a></td>
                 <td>
-                    <form action="/register/{{$value->id}}" method="POST">
+                    <form action="/addfaculty/{{$value->id}}" method="POST">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value="Delete">

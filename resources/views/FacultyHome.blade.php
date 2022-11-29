@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.faculty_layout')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -7,7 +7,7 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
   
                 <div class="card-body">
-                    You are a Manager User.
+                    You are a Faculty User.
                 </div>
             </div>
         </div>

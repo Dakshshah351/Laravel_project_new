@@ -16,7 +16,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body style="background-color:lightblue">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                   
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -74,7 +74,25 @@
 
         <main class="py-4">
             @yield('content')
-        </main>
+            <div style="background-color:white"> <hr>
+<CENTER> <img src="{{ asset('img/campus.jpg')}}" width="600px"height="100px"></CENTER><HR></div>
+    <img src="{{ asset('img/campus3.jpg')}}" width="500px"height="400px"> 
+    <img src="{{ asset('img/campus1.jpg')}}" width="500px"height="400px"> 
+    <img src="{{ asset('img/campus2.jpg')}}" width="500px"height="400px">
+    <br>
+    <br>
+    <div style="background-color:white">
+    <hr>
+       
+<center><h1><u> About Us</u></h1></center> 
+<div><pre>
+<h4>    The Project By:
+            Thakkar Divy
+            Shah Daksh
+            Mistry Tirth</h4>
+</div>
+    </div>
+</main>
     </div>
 </body>
 </html>

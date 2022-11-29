@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin_layout')
   
 @section('content')
 <div class="container">
@@ -9,6 +9,7 @@
   
                 <div class="card-body">
                     You are a Admin User.
+                    
                 </div>
             </div>
         </div>

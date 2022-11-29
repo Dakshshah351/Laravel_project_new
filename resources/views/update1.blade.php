@@ -7,7 +7,7 @@
 @section('main-section')
     Update User<br>
     {{$user}}
-    <form action="/register1/{{ $user->id }}" method="POST">
+    <form action="/addfaculty/{{ $user->id }}" method="POST">
         @csrf
         @method('PUT')
         <input type="text" name="name" value="{{$user->name}}"><br>

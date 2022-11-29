@@ -16,9 +16,14 @@
 
                   
                     You are a User.
+                    <form action="/action_page.php">
+                        <input type="file" id="myFile" name="filename">
+                        <input type="submit">
+                      </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection

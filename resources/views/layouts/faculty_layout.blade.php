@@ -30,7 +30,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                   
+                     <a style="color: darkblue, align:right" class="text-decoration-none " href="/./register1">| Add Student |</a></ul>
+                     <a style="color: darkblue, align:right" class="text-decoration-none " href="/./addfaculty">| Add Subject |</a></ul>
+          
                     </ul>
 
                     <!-- Right Side Of Navbar -->

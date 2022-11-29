@@ -1,17 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Register;
+use App\Models\faculty;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class RegisterController extends Controller
+
+
+class AddfacultyController extends Controller
 {
     public function index()
     {
-        $data = Register::all();
-        return view('register1', compact('data'));
+        $data = faculty::all();
+        return view('addfaculty', compact('data'));
     }
     public function store(Request $request)
     {
@@ -22,31 +23,33 @@ class RegisterController extends Controller
             'confirm_password' => 'required|same:password',
         ]);
 
-        Register::create([
+        faculty::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
         ]);
 
-        return redirect('/register1');
+        return redirect('/addfaculty');
     }
     public function destroy($id)
     {
-        Register::where('id',$id)->delete();
-        return redirect('/register1');
+        faculty::where('id',$id)->delete();
+        return redirect('/addfaculty');
     }
     public function edit($id)
     {
-        $user = Register::where('id',$id)->first();
-        return view('update',compact('user'));
+        $user = faculty::where('id',$id)->first();
+        return view('update1',compact('user'));
     }
     public function update(Request $request, $id)
     {
-        Register::where('id',$id)->update([
+        faculty::where('id',$id)->update([
             'name' => $request['name'],
             'email' => $request['email'],
         ]);
         // Register::where('id',$id)->update($request->all());
-        return redirect('/register1');
+        return redirect('/addfaculty');
     }
 }
+
+
